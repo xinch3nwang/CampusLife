@@ -1,0 +1,77 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName xfonts-wqy
+skinparam classFontSize 10
+skinparam dpi 1000
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace news {
+        class com.wxc.campuslife.community.news.NewsActivity {
+            ~ btnNext : Button
+            ~ btnPrev : Button
+            ~ listTitle : List<Map<Integer, String>>
+            ~ lvTitles : ListView
+            ~ newslist : ArrayList<String>
+            ~ page : int
+            ~ sel : int
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace news {
+        class com.wxc.campuslife.community.news.HttpTask {
+            # doInBackground()
+            # onPostExecute()
+        }
+      }
+    }
+  }
+
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace news {
+        class com.wxc.campuslife.community.news.NewsDetailActivity {
+            ~ strUrl : String
+            ~ tvDetailContent : TextView
+            ~ tvDetailTitle : TextView
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace news {
+        class com.wxc.campuslife.community.news.DetailTask {
+            # doInBackground()
+            # onPostExecute()
+        }
+      }
+    }
+  }
+  
+
+'  com.wxc.campuslife.community.news.NewsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.news.NewsDetailActivity +-down- com.wxc.campuslife.community.news.DetailTask
+  com.wxc.campuslife.community.news.NewsActivity +-down- com.wxc.campuslife.community.news.HttpTask
+'  com.wxc.campuslife.community.news.HttpTask -up-|> android.os.AsyncTask
+'  com.wxc.campuslife.community.news.DetailTask -up-|> android.os.AsyncTask
+'  com.wxc.campuslife.community.news.NewsDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+
+
+right footer
+
+endfooter
+
+@enduml

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=200px,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title>启动中...</title>
+</head>
+<body>
+    <textarea id="chat-log" cols="38" rows="35" readonly="readonly"></textarea><br>
+    <input id="chat-message-input" type="text" size="35"><br>
+    <input id="chat-message-submit" type="button" value="发送">
+    {{ room_name|json_script:"room-name" }}
+    {{ user_name|json_script:"user-name" }}
+    <script>
+        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+        const userName = JSON.parse(document.getElementById('user-name').textContent);
+
+        var chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chatapp/chat/'
+            + roomName
+            + '/'
+        );
+
+        chatSocket.onopen = function(){
+            console.log("open");
+        }
+
+        chatSocket.onerror = function(e){
+　　         console.log(e);
+        }
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            document.querySelector('#chat-log').value += (data.message + '\n');
+            document.title = data.message
+            console.log(data.message)
+<!--            confirm(data.message)-->
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        document.querySelector('#chat-message-input').focus();
+        document.querySelector('#chat-message-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#chat-message-submit').click();
+            }
+        };
+
+        document.querySelector('#chat-message-submit').onclick = function(e) {
+            const messageInputDom = document.querySelector('#chat-message-input');
+            const message = "["+currTime()+"]\n"+userName+":"+messageInputDom.value+"\n";
+            saveMessage(message, roomName);
+            chatSocket.send(JSON.stringify({
+                'message': message
+            }));
+            messageInputDom.value = '';
+        };
+
+        function saveMessage(m, r){
+            $.ajax({
+                url: "http://192.168.70.219:8000/chatapp/chat/past/",
+                data: JSON.stringify({
+                    message : m,
+                    room : r
+                }),
+                contentType: 'application/json',
+                type: "POST",
+                traditional: true,
+                success: function(result) {
+                    console.log("!")
+                },
+                fail: function(result) {
+                    console.log("?")
+                }
+            });
+        }
+
+        function currTime(){
+            var currentDate = new Date();
+            year = currentDate.getFullYear();
+            month = currentDate.getMonth() + 1;
+            date = currentDate.getDate();
+            hour = currentDate.getHours();
+            minute = currentDate.getMinutes();
+            second = currentDate.getSeconds();
+            formattedDateString = year + '.' + month + '.' + date + ' ' + hour + ':' + minute + ':' + second;
+            return formattedDateString;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">校园生活助手CampusLife</string>
+    <string name="login_username_hint">请输入账号</string>
+    <string name="login_pass_hint">请输入密码</string>
+</resources>

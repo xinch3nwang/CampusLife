@@ -1,0 +1,58 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName xfonts-wqy
+skinparam classFontSize 10
+skinparam dpi 800
+
+
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.RemindAdapter {
+          - mRemindList : List<Remind>
+          + RemindAdapter()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          - remove()
+      }
+    }
+  }
+
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.ViewHolder {
+          ~ RemindName : CheckBox
+          ~ RemindTime : TextView
+          ~ RemindView : View
+          + ViewHolder()
+      }
+    }
+  }
+
+
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.RemindAllAdapter {
+          - mRemindList : List<Remind>
+          + RemindAllAdapter()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + showRemind()
+          - refresh()
+          - remove()
+      }
+    }
+  }
+
+  com.wxc.campuslife.prompt.RemindAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.wxc.campuslife.prompt.RemindAdapter +-down- com.wxc.campuslife.prompt.ViewHolder
+  com.wxc.campuslife.prompt.ViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+'  com.wxc.campuslife.prompt.RemindAllActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.prompt.RemindAllAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.wxc.campuslife.prompt.RemindAllAdapter +-down- com.wxc.campuslife.prompt.ViewHolder
+  com.wxc.campuslife.prompt.RemindAllAdapter.ViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+@enduml

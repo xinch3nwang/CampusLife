@@ -1,0 +1,364 @@
+@startuml
+
+title __CAMPUSLIFE.APP's Class Diagram__\n
+
+  namespace com.wxc.campuslife {
+    class com.wxc.campuslife.BuildConfig {
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      class com.wxc.campuslife.community.CommunityActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      class com.wxc.campuslife.community.ContactActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      class com.wxc.campuslife.community.ForumActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.Article {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.ArticleDetailActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.ArticleInfo {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.EditArticleActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.PublishActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        namespace comment {
+          class com.wxc.campuslife.community.article.comment.Comment {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        namespace comment {
+          class com.wxc.campuslife.community.article.comment.CommentAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        namespace comment {
+          class com.wxc.campuslife.community.article.comment.CommentInfo {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace catalog {
+        class com.wxc.campuslife.community.catalog.ArticleAdapter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace catalog {
+        class com.wxc.campuslife.community.catalog.LifeActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace catalog {
+        class com.wxc.campuslife.community.catalog.LostActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace catalog {
+        class com.wxc.campuslife.community.catalog.QuestionActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace catalog {
+        class com.wxc.campuslife.community.catalog.RandomActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace news {
+        class com.wxc.campuslife.community.news.NewsActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace news {
+        class com.wxc.campuslife.community.news.NewsDetailActivity {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace login {
+      class com.wxc.campuslife.login.LoginActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.AccountDetailActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.MineActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.User {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.UserInfo {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.AlarmService {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.PromptActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.Remind {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.RemindAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.RemindAllActivity {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.RemindAllAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace prompt {
+      class com.wxc.campuslife.prompt.WeatherInfo {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace utils {
+      class com.wxc.campuslife.utils.AccessServerData {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace utils {
+      class com.wxc.campuslife.utils.AlarmManagerUtils {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace utils {
+      class com.wxc.campuslife.utils.FormatConvert {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace utils {
+      class com.wxc.campuslife.utils.MyApplication {
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace utils {
+      class com.wxc.campuslife.utils.dbHelper {
+      }
+    }
+  }
+  
+
+  com.wxc.campuslife.community.CommunityActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.ContactActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.ContactActivity o-- com.wxc.campuslife.utils.AlarmManagerUtils : alarmManagerUtils
+  com.wxc.campuslife.community.ForumActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.article.Article .up.|> java.io.Serializable
+  com.wxc.campuslife.community.article.ArticleDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.article.EditArticleActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.article.PublishActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.article.comment.CommentAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.wxc.campuslife.community.catalog.ArticleAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.wxc.campuslife.community.catalog.LifeActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.catalog.LostActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.catalog.QuestionActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.catalog.RandomActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.news.NewsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.news.NewsDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.login.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.mine.AccountDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.mine.MineActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.prompt.AlarmService -up-|> android.app.Service
+  com.wxc.campuslife.prompt.PromptActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.prompt.RemindAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.wxc.campuslife.prompt.RemindAdapter o-- com.wxc.campuslife.utils.AlarmManagerUtils : alarmManagerUtils
+  com.wxc.campuslife.prompt.RemindAllActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.prompt.RemindAllAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.wxc.campuslife.prompt.WeatherInfo o-- com.wxc.campuslife.prompt.WeatherInfo.Now : now
+  com.wxc.campuslife.utils.MyApplication -up-|> android.app.Application
+  com.wxc.campuslife.utils.dbHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

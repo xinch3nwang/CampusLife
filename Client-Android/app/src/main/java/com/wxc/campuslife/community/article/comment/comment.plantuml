@@ -1,0 +1,135 @@
+@startuml
+
+skinparam shadowing false
+skinparam defaultFontName xfonts-wqy
+skinparam classFontSize 10
+skinparam dpi 300
+
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        namespace comment {
+          class com.wxc.campuslife.community.article.comment.Comment {
+              - article : String
+              - content : String
+              - create_time : String
+              - id : String
+              - parent : String
+              - userid : String
+              - username : String
+              + Comment()
+              + getArticle()
+              + getContent()
+              + getCreate_time()
+              + getId()
+              + getParent()
+              + getUserid()
+              + getUsername()
+              + setArticle()
+              + setContent()
+              + setCreate_time()
+              + setId()
+              + setParent()
+              + setUserid()
+              + setUsername()
+          }
+        }
+      }
+    }
+  }
+
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        namespace comment {
+'          class com.wxc.campuslife.community.article.comment.Res {
+'              - article : String
+'              - content : String
+'              - create_time : String
+'              - id : String
+'              - nickname : String
+'              - parent : String
+'              - user : String
+'              + getArticle()
+'              + getContent()
+'              + getCreate_time()
+'              + getId()
+'              + getNickname()
+'              + getParent()
+'              + getUser()
+'              + setArticle()
+'              + setContent()
+'              + setCreate_time()
+'              + setId()
+'              + setNickname()
+'              + setParent()
+'              + setUser()
+'          }
+'        }
+'      }
+'    }
+'  }
+'
+'
+'
+'
+'
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        namespace comment {
+'          class com.wxc.campuslife.community.article.comment.CommentInfo {
+'              - count : int
+'              - result : Res[]
+'              + getCount()
+'              + getResult()
+'              + setCount()
+'              + setResult()
+'          }
+'        }
+'      }
+'    }
+'  }
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        namespace comment {
+'          class com.wxc.campuslife.community.article.comment.CommentAdapter {
+'              - mCommentList : List<Comment>
+'              + CommentAdapter()
+'              + getItemCount()
+'              + onBindViewHolder()
+'              + onCreateViewHolder()
+'          }
+'        }
+'      }
+'    }
+'  }
+  
+
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        namespace comment {
+'          class com.wxc.campuslife.community.article.comment.ViewHolder {
+'              ~ commentView : View
+'              ~ tv_content : TextView
+'              ~ tv_name : TextView
+'              ~ tv_subcomment : ImageButton
+'              + ViewHolder()
+'          }
+'        }
+'      }
+'    }
+'  }
+
+
+
+'  com.wxc.campuslife.community.article.comment.CommentAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+'  com.wxc.campuslife.community.article.comment.CommentAdapter +-down- com.wxc.campuslife.community.article.comment.CommentAdapter.ViewHolder
+'  com.wxc.campuslife.community.article.comment.CommentAdapter.ViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+'  com.wxc.campuslife.community.article.comment.CommentInfo +-down- com.wxc.campuslife.community.article.comment.Res
+
+
+@enduml

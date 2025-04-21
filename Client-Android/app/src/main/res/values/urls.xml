@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url_wire_dorm">"http://114.213.64.171:8000/"</string>
+    <string name="url_wireless">"http://10.8.83.194:8000/"</string>
+    <string name="url_usb_phone1">"http://192.168.184.47:8000/"</string>
+    <string name="url_usb_phone">"http://192.168.70.219:8000/"</string>
+    <string name="url_chat">"http://192.168.70.219:8001/"</string>
+</resources>

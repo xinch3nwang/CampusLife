@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView_commenter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="匿名用户:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:text="春天是她最爱的季节  当微风随意吹乱她的头发  她并不在意身边世界的吵杂  只想着自己生命中的变化  还有十五分钟才午休  从早到晚没有想象中那么好过  安定的日子不一定就是幸福  忘不掉她在心里做过的梦  她今年农历三月六号刚满二十二  刚甩开课本要离开家看看这世界  却发现许多烦恼要面对 " />
+
+    <ImageButton
+        android:id="@+id/button_subcomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+</LinearLayout>

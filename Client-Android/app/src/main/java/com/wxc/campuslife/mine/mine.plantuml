@@ -1,0 +1,198 @@
+@startuml
+skinparam classFontSize 10
+skinparam dpi 300
+'title __MINE's Class Diagram__\n
+
+'  namespace com.wxc.campuslife {
+'    namespace mine {
+'      class com.wxc.campuslife.mine.AccountDetailActivity {
+'          ~ age : String
+'          ~ email : String
+'          ~ gender : String
+'          ~ handler : Handler
+'          ~ handler_vis : Handler
+'          ~ intro : String
+'          ~ nickname : String
+'          ~ status : String
+'          ~ userid : String
+'          # onCreate()
+'      }
+'    }
+'  }
+'
+'
+'  namespace com.wxc.campuslife {
+'    namespace mine {
+'      class com.wxc.campuslife.mine.MineActivity {
+'          ~ handler : Handler
+'          # onCreate()
+'      }
+'    }
+'  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.User {
+          - age : int
+          - article_collected_count : int
+          - article_count : int
+          - article_liked_count : int
+          - articles_collected : String[]
+          - articles_liked : String[]
+          - email : String
+          - fans : String[]
+          - fans_count : int
+          - gender : String
+          - id : String
+          - intro : String
+          - nickname : String
+          - status : String
+          - usrs_liked : String[]
+          - usrs_liked_count : int
+          + User()
+'          + getAge()
+'          + getArticle_collected_count()
+'          + getArticle_count()
+'          + getArticle_liked_count()
+'          + getArticles_collected()
+'          + getArticles_liked()
+'          + getEmail()
+'          + getFans()
+'          + getFans_count()
+'          + getGender()
+'          + getId()
+'          + getIntro()
+'          + getNickname()
+'          + getStatus()
+'          + getUsrs_liked()
+'          + getUsrs_liked_count()
+'          + setAge()
+'          + setArticle_collected_count()
+'          + setArticle_count()
+'          + setArticle_liked_count()
+'          + setArticles_collected()
+'          + setArticles_liked()
+'          + setEmail()
+'          + setFans()
+'          + setFans_count()
+'          + setGender()
+'          + setId()
+'          + setIntro()
+'          + setNickname()
+'          + setStatus()
+'          + setUsrs_liked()
+'          + setUsrs_liked_count()
+      }
+    }
+  }
+
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.UserInfo {
+          - code : String
+          - count : int
+          - msg : String
+          - result : Res[]
+'          + getCode()
+'          + getCount()
+'          + getMsg()
+'          + getResult()
+'          + setCode()
+'          + setCount()
+'          + setMsg()
+'          + setResult()
+      }
+    }
+  }
+
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.Res {
+          - model : String
+          - nickname : String
+          - pk : String
+          - fields : Fld
+'          + getFields()
+'          + getModel()
+'          + getNickname()
+'          + getPk()
+'          + setFields()
+'          + setModel()
+'          + setNickname()
+'          + setPk()
+      }
+    }
+  }
+
+
+  namespace com.wxc.campuslife {
+    namespace mine {
+      class com.wxc.campuslife.mine.Fld {
+          - age : int
+          - article_collected_count : int
+          - article_count : int
+          - article_liked_count : int
+          - articles_collected : String[]
+          - articles_liked : String[]
+          - email : String
+          - fans : String[]
+          - fans_count : int
+          - gender : String
+          - id : String
+          - intro : String
+          - status : String
+          - usrs_liked : String[]
+          - usrs_liked_count : int
+'          + getAge()
+'          + getArticle_collected_count()
+'          + getArticle_count()
+'          + getArticle_liked_count()
+'          + getArticles_collected()
+'          + getArticles_liked()
+'          + getEmail()
+'          + getFans()
+'          + getFans_count()
+'          + getGender()
+'          + getId()
+'          + getIntro()
+'          + getStatus()
+'          + getUsrs_liked()
+'          + getUsrs_liked_count()
+'          + setAge()
+'          + setArticle_collected_count()
+'          + setArticle_count()
+'          + setArticle_liked_count()
+'          + setArticles_collected()
+'          + setArticles_liked()
+'          + setEmail()
+'          + setFans()
+'          + setFans_count()
+'          + setGender()
+'          + setId()
+'          + setIntro()
+'          + setStatus()
+'          + setUsrs_liked()
+'          + setUsrs_liked_count()
+      }
+    }
+  }
+
+
+'  com.wxc.campuslife.mine.AccountDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+'  com.wxc.campuslife.mine.MineActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.mine.UserInfo +-down- com.wxc.campuslife.mine.Res : result
+'  com.wxc.campuslife.mine.UserInfo.Res o-- com.wxc.campuslife.mine.Fld : fields
+  com.wxc.campuslife.mine.Res +-down- com.wxc.campuslife.mine.Fld : fields
+
+
+right footer
+
+'
+'PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+'For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

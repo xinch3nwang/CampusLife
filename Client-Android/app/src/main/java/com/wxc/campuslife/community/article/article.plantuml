@@ -1,0 +1,201 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName xfonts-wqy
+skinparam classFontSize 10
+skinparam dpi 800
+
+
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.Article {
+            - articleid : String
+            - author : String
+            - collected_count : int
+            - content : String
+            - date : String
+            - liked_count : int
+            - readed_count : int
+            - tag : String
+            - title : String
+            + Article()
+'            + getArticleid()
+'            + getAuthor()
+'            + getCollected_count()
+'            + getContent()
+'            + getDate()
+'            + getLiked_count()
+'            + getReaded_count()
+'            + getTag()
+'            + getTitle()
+'            + setArticleid()
+'            + setAuthor()
+'            + setCollected_count()
+'            + setContent()
+'            + setDate()
+'            + setLiked_count()
+'            + setReaded_count()
+'            + setTag()
+'            + setTitle()
+        }
+      }
+    }
+  }
+  
+'
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        class com.wxc.campuslife.community.article.ArticleDetailActivity {
+'            ~ author : String
+'            ~ commentList : List<Comment>
+'            ~ handler : Handler
+'            ~ r : String
+'            # onCreate()
+'            - showComments()
+'        }
+'      }
+'    }
+'  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.ArticleInfo {
+            - code : String
+            - count : int
+            - msg : String
+            - result : Res[]
+            + getCode()
+            + getCount()
+            + getMsg()
+            + getResult()
+            + setCode()
+            + setCount()
+            + setMsg()
+            + setResult()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.Res {
+            - model : String
+            - pk : String
+            + getFields()
+            + getModel()
+            + getPk()
+            + setFields()
+            + setModel()
+            + setPk()
+        }
+      }
+    }
+  }
+  
+
+  namespace com.wxc.campuslife {
+    namespace community {
+      namespace article {
+        class com.wxc.campuslife.community.article.Fld {
+            - admired_count : int
+            - author : String
+            - collected_count : int
+            - commented_count : int
+            - content : String
+            - liked_count : int
+            - pub_time : String
+            - readed_count : int
+            - status : String
+            - tag_name : String
+            - title : String
+            - up_time : String
+            - update_time : String
+'            + getAdmired_count()
+'            + getAuthor()
+'            + getCollected_count()
+'            + getCommented_count()
+'            + getContent()
+'            + getLiked_count()
+'            + getPub_time()
+'            + getReaded_count()
+'            + getStatus()
+'            + getTag_name()
+'            + getTitle()
+'            + getUp_time()
+'            + getUpdate_time()
+'            + setAdmired_count()
+'            + setAuthor()
+'            + setCollected_count()
+'            + setCommented_count()
+'            + setContent()
+'            + setLiked_count()
+'            + setPub_time()
+'            + setReaded_count()
+'            + setStatus()
+'            + setTag_name()
+'            + setTitle()
+'            + setUp_time()
+'            + setUpdate_time()
+        }
+      }
+    }
+  }
+  
+'
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        class com.wxc.campuslife.community.article.EditArticleActivity {
+'            ~ content : String
+'            ~ id : String
+'            ~ preferences : SharedPreferences
+'            ~ tag : String
+'            ~ title : String
+'            # onCreate()
+'        }
+'      }
+'    }
+'  }
+'
+'
+'  namespace com.wxc.campuslife {
+'    namespace community {
+'      namespace article {
+'        class com.wxc.campuslife.community.article.PublishActivity {
+'            ~ content : String
+'            ~ handler : Handler
+'            ~ id : String
+'            ~ preferences : SharedPreferences
+'            ~ tag : String
+'            ~ title : String
+'            # onCreate()
+'        }
+'      }
+'    }
+'  }
+'
+
+'  com.wxc.campuslife.community.article.Article .up.|> java.io.Serializable
+'  com.wxc.campuslife.community.article.ArticleDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.wxc.campuslife.community.article.ArticleInfo +-down- com.wxc.campuslife.community.article.Res
+  com.wxc.campuslife.community.article.Res o-- com.wxc.campuslife.community.article.Fld : fields
+'  com.wxc.campuslife.community.article.Res +-down- com.wxc.campuslife.community.article.Fld
+'  com.wxc.campuslife.community.article.EditArticleActivity -up-|> androidx.appcompat.app.AppCompatActivity
+'  com.wxc.campuslife.community.article.PublishActivity -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
