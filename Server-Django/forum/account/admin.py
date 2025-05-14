@@ -12,6 +12,6 @@ from .models import Usr, UsrProfile
 admin.site.register(Usr)
 admin.site.register(UsrProfile)
 
-admin.site.site_header = "学生社区管理系统"
-admin.site.site_title = "学生社区管理系统"
-admin.site.index_title = "学生社区管理系统"
+admin.site.site_header = "社交平台"
+admin.site.site_title = "社交平台"
+admin.site.index_title = "社交平台"

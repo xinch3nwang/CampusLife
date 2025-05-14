@@ -89,7 +89,7 @@ DATABASES = {
     'default':
         {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'community_forum',
+            'NAME': 'forum',
             'HOST': 'localhost',
             'PORT': 3306,
             'USER': 'root',

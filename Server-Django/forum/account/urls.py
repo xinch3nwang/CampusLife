@@ -1,5 +1,6 @@
 from django.urls import path,re_path 
 from account import views
+from rest_framework_simplejwt.views import TokenRefreshView
 
 
 urlpatterns = [ 
@@ -11,4 +12,5 @@ urlpatterns = [
     path('fans/', views.fans),
     path('user_profile/', views.user_profile),
     path('user_profile_update/', views.user_profile_update),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
