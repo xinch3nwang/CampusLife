@@ -1,0 +1,19 @@
+django-admin startproject xxx
+cd xxx
+django-admin startapp user
+settings.py INSTALLED_APPS
+models.py
+admin.py
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver 192.168.184.47:8000
+python manage.py runserver 192.168.70.219:8000
+	(add allowed host)
+
+
+n:admin p:admin
+
+
+cd xxx\Redis-x64-5.0.14.1
+redis-server.exe redis.windows.conf
